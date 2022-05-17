@@ -199,7 +199,7 @@ const Sidebar = ({ show, handleClose }) => {
                                        aux modifications aux infrastructures du complexe sportif de Wavre
                                        (suppression de la piste pour l’élargissement du terrain de football du Racing Jet de Wavre)
                                        au stade Justin Peeters.</p>
-                                    <a href="contact.html" className="z-btn z-btn-white">Nous contacter</a>
+                                    <Link to="/infos" className="z-btn z-btn-white">Plus d'informations</Link>
                                     <div className="sidebar__contact mt-30">
                                        <ul>
                                           <li>
