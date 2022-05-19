@@ -10,7 +10,7 @@ const SingleElite = ({ image, name, title, palmares }) => {
                <div className="team__thumb mb-25">
                   <img src={`assets/img/team/elite/elite-${image}.jpg`} alt={`Elite ${name}`} />
                   <div className="team__info text-start">
-                     <h3><Link to="/teamDetails">{name}</Link></h3>
+                     <h3>{name}</h3>
                      <span>{palmares}</span>
                   </div>
                   <div className="team__social theme-social">

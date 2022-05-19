@@ -1,14 +1,14 @@
 import React from 'react';
-import CatSideBar from '../../../components/Sidebar/CatSideBar';
+import SectionSideBar from '../../../components/Sidebar/SectionSideBar';
 
-const ResultatsArea = () => {
+const SectionArea = () => {
     return (
         <>
             <section className="table__area pt-115 pb-100">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-4 col-lg-4 order-lg-first">
-                            <CatSideBar />
+                            <SectionSideBar />
                         </div>
                     </div>
                 </div>
@@ -17,4 +17,4 @@ const ResultatsArea = () => {
     );
 };
 
-export default ResultatsArea;
+export default SectionArea;

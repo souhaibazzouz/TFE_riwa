@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import CatSideBar from '../../../components/Sidebar/CatSideBar';
+import AllCatSideBar from '../../../components/Sidebar/AllCatSideBar';
 
 import data from "./tableData.js";
 
@@ -11,7 +11,7 @@ const RecordClubTable = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-4 col-lg-4 order-lg-first">
-                            <CatSideBar />
+                            <AllCatSideBar />
                         </div>
                         <div className="col-xl-8 col-lg-8">
                             <div className="table__content">

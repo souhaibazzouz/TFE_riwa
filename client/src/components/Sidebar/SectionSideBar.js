@@ -56,7 +56,7 @@ const SectionSideBar = () => {
                                     <div className="card">
                                         <div className="card-header" id="acc_3" >
                                             <h5 className="mb-0">
-                                                <button className="btn btn-link collapsed">
+                                                <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_3">
                                                     Jogging & Trail
                                                 </button>
                                             </h5>
@@ -74,16 +74,16 @@ const SectionSideBar = () => {
                                     <div className="card">
                                         <div className="card-header" id="acc_4" >
                                             <h5 className="mb-0">
-                                                <button className="btn btn-link collapsed">
+                                                <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
                                                     Riwa For Fun - RFF
                                                 </button>
                                             </h5>
                                         </div>
-                                        <div id="collapse_3" className="collapse" aria-labelledby="acc_3" data-bs-parent="#accordionExample">
+                                        <div id="collapse_4" className="collapse" aria-labelledby="acc_4" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
                                                 <ul>
                                                     <li ><span><Link to="">Informations</Link></span></li>
-                                                    <li ><span><Link to="">Inscription qu RFF</Link></span></li>
+                                                    <li ><span><Link to="">Inscription au RFF</Link></span></li>
                                                     <li ><span><Link to="">Schéma 5 km</Link></span></li>
                                                     <li ><span><Link to="">Schéma 5 km</Link></span></li>
                                                 </ul>

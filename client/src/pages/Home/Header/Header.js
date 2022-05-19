@@ -113,7 +113,7 @@ const Header = () => {
                                        <NavLink to="/elites">Élites </NavLink>
                                     </li>
                                     <li>
-                                       <NavLink to="/competitions">Compétitions</NavLink>
+                                       <Link to="">Compétitions</Link>
                                        <ul className="submenu">
                                           <li><NavLink to="/organisations">Nos Organisations</NavLink></li>
                                           <li><NavLink to="/resultats">Résultats</NavLink></li>

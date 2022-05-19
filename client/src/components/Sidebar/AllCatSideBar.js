@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const CatSideBar = () => {
+const AllCatSideBar = () => {
     return (
         <>
             <div className="services__sidebar mr-50">
@@ -42,7 +42,7 @@ const CatSideBar = () => {
                                         <div className="card-header" id="acc_2" >
                                             <h5 className="mb-0">
                                                 <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2">
-                                                    Toutes Catégories
+                                                    Cadets à Seniors
                                                 </button>
                                             </h5>
                                         </div>
@@ -64,10 +64,47 @@ const CatSideBar = () => {
                                     <div className="card">
                                         <div className="card-header" id="acc_3" >
                                             <h5 className="mb-0">
-                                                <button className="btn btn-link collapsed">
-                                                    Jogging & Trail
+                                                <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_3">
+                                                    Masters
                                                 </button>
                                             </h5>
+                                        </div>
+
+                                        <div id="collapse_3" className="collapse" aria-labelledby="acc_3" data-bs-parent="#accordionExample">
+                                            <div className="card-body accordion-body">
+                                                <ul>
+                                                    <li ><span><Link to="">Indoor Femmes</Link></span></li>
+                                                    <li ><span><Link to="">Indoor Homme</Link></span></li>
+                                                    <li ><span><Link to="">Outdoor Femmes</Link></span></li>
+                                                    <li ><span><Link to="">Outdoor Homme</Link></span></li>
+                                                    <li ><span><Link to="">Cross Femmes</Link></span></li>
+                                                    <li ><span><Link to="">Cross Homme</Link></span></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card">
+                                        <div className="card-header" id="acc_4" >
+                                            <h5 className="mb-0">
+                                                <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
+                                                    Toutes Catégories
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapse_4" className="collapse" aria-labelledby="acc_4" data-bs-parent="#accordionExample">
+                                            <div className="card-body accordion-body">
+                                                <ul>
+                                                    <li ><span><Link to="">Indoor Femmes</Link></span></li>
+                                                    <li ><span><Link to="">Indoor Homme</Link></span></li>
+                                                    <li ><span><Link to="">Outdoor Femmes</Link></span></li>
+                                                    <li ><span><Link to="">Outdoor Homme</Link></span></li>
+                                                    <li ><span><Link to="">Cross Femmes</Link></span></li>
+                                                    <li ><span><Link to="">Cross Homme</Link></span></li>
+
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -80,4 +117,4 @@ const CatSideBar = () => {
     );
 };
 
-export default CatSideBar;
+export default AllCatSideBar;
