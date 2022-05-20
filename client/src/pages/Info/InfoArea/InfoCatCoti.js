@@ -22,12 +22,12 @@ const InfoCatCoti = () => {
                             <div className="services__nav wow fadeInUp" data-wow-delay=".4s">
                                 <ul className="nav nav-pills " id="services-tab" role="tablist">
                                     <li className="nav-item mb-30">
-                                        <a className="nav-link active" id="customer-tab" data-bs-toggle="pill" href="#categories" role="tab" aria-controls="categories" aria-selected="true">
+                                        <a className="nav-link active" data-bs-toggle="pill" href="#categories" role="tab" aria-controls="categories" aria-selected="true">
                                             <i ><BiRun /></i> Catégories
                                         </a>
                                     </li>
                                     <li className="nav-item mb-30">
-                                        <a className="nav-link" id="social-tab" data-bs-toggle="pill" href="#cotisation" role="tab" aria-controls="cotisation" aria-selected="true">
+                                        <a className="nav-link" data-bs-toggle="pill" href="#cotisation" role="tab" aria-controls="cotisation" aria-selected="true">
                                             <i ><BsCurrencyEuro /></i> Cotisations
                                         </a>
                                     </li>

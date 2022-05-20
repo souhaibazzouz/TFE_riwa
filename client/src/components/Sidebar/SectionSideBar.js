@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-
 
 const SectionSideBar = () => {
     return (
@@ -27,9 +24,21 @@ const SectionSideBar = () => {
                                         <div id="collapse_1" className="collapse" aria-labelledby="acc_1" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
                                                 <ul>
-                                                    <li ><span><Link to="">Informations</Link></span></li>
-                                                    <li ><span><Link to="">Entraineur</Link></span></li>
-                                                    <li ><span><Link to="">Calendrier</Link></span></li>
+                                                    <li >
+                                                        <a className="nav-link active" data-bs-toggle="pill" href="#info_bpm" role="tab" aria-controls="info_bpm" aria-selected="true">
+                                                            Informations
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#entraineur_bpm" role="tab" aria-controls="entraineur_bpm" aria-selected="true">
+                                                            Entraineur
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#cal_bpm" role="tab" aria-controls="cal_bpm" aria-selected="true">
+                                                            Calendrier
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -46,9 +55,21 @@ const SectionSideBar = () => {
                                         <div id="collapse_2" className="collapse" aria-labelledby="acc_2" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
                                                 <ul>
-                                                    <li ><span><Link to="">Informations</Link></span></li>
-                                                    <li ><span><Link to="">Entraineur</Link></span></li>
-                                                    <li ><span><Link to="">Calendrier</Link></span></li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#info_tc" role="tab" aria-controls="info_tc" aria-selected="true">
+                                                            Informations
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#entraineur_tc" role="tab" aria-controls="entraineur_tc" aria-selected="true">
+                                                            Entraineur
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#cal_tc" role="tab" aria-controls="cal_tc" aria-selected="true">
+                                                            Calendrier
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -64,9 +85,21 @@ const SectionSideBar = () => {
                                         <div id="collapse_3" className="collapse" aria-labelledby="acc_3" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
                                                 <ul>
-                                                    <li ><span><Link to="">Informations</Link></span></li>
-                                                    <li ><span><Link to="">Entraineur</Link></span></li>
-                                                    <li ><span><Link to="">Calendrier</Link></span></li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#info_jt" role="tab" aria-controls="info_jt" aria-selected="true">
+                                                            Informations
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#entraineur_jt" role="tab" aria-controls="entraineur_jt" aria-selected="true">
+                                                            Entraineur
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#cal_jt" role="tab" aria-controls="cal_jt" aria-selected="true">
+                                                            Calendrier
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -82,10 +115,26 @@ const SectionSideBar = () => {
                                         <div id="collapse_4" className="collapse" aria-labelledby="acc_4" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
                                                 <ul>
-                                                    <li ><span><Link to="">Informations</Link></span></li>
-                                                    <li ><span><Link to="">Inscription au RFF</Link></span></li>
-                                                    <li ><span><Link to="">Schéma 5 km</Link></span></li>
-                                                    <li ><span><Link to="">Schéma 5 km</Link></span></li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#info_rff" role="tab" aria-controls="info_rff" aria-selected="true">
+                                                            Informations
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#inscription_rff" role="tab" aria-controls="inscription_rff" aria-selected="true">
+                                                            Inscription au RFF
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#schema_5km_rff" role="tab" aria-controls="schema_5km_rff" aria-selected="true">
+                                                            Schéma 5 km
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a className="nav-link" data-bs-toggle="pill" href="#schema_10km_rff" role="tab" aria-controls="schema_10km_rff" aria-selected="true">
+                                                            Schéma 10 km
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>

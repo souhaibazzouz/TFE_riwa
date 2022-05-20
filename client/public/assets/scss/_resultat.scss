@@ -1,0 +1,44 @@
+.resultat {
+    &__content {
+        & ul {
+            & li {
+                margin-bottom: 15px;
+
+                &:hover {
+                    & span {
+                        color: $theme-color;
+
+                        & i {
+                            background: $theme-color;
+                            color: $white;
+                        }
+                    }
+                }
+
+                & span {
+                    color: $black;
+                    position: relative;
+                    padding-left: 30px;
+                    font-weight: normal;
+
+                    & i {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        @include transform(translateY(-50%));
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        font-size: 15px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: $theme-color;
+                        @include border-radius(50%);
+                        background: $grey-4;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
