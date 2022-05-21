@@ -2,6 +2,10 @@ import React from 'react';
 import SectionSideBar from '../../../components/Sidebar/SectionSideBar';
 import SectionInfo from './SectionAreaTab/SectionInfo';
 import RFFInfo from './SectionAreaTab/RFFInfo';
+import RFFK from './SectionAreaTab/RFFK';
+import BPMEntraineur from './SectionAreaTab/BPMEntraineur';
+import TCEntraineur from './SectionAreaTab/TCEntraineur';
+import JTEntraineur from './SectionAreaTab/JTEntraineur';
 
 
 const SectionArea = () => {
@@ -22,11 +26,7 @@ const SectionArea = () => {
                                     </div>
 
                                     <div className="tab-pane fade" id="entraineur_bpm" role="tabpanel" aria-labelledby="entraineur_bpm-tab">
-
-                                    </div>
-
-                                    <div className="tab-pane fade" id="cal_bpm" role="tabpanel" aria-labelledby="cal_bpm-tab">
-
+                                        <BPMEntraineur />
                                     </div>
 
                                     <div className="tab-pane fade" id="info_tc" role="tabpanel" aria-labelledby="info_tc-tab">
@@ -35,11 +35,7 @@ const SectionArea = () => {
                                     </div>
 
                                     <div className="tab-pane fade" id="entraineur_tc" role="tabpanel" aria-labelledby="entraineur_tc-tab">
-
-                                    </div>
-
-                                    <div className="tab-pane fade" id="cal_tc" role="tabpanel" aria-labelledby="cal_tc-tab">
-
+                                        <TCEntraineur />
                                     </div>
 
                                     <div className="tab-pane fade" id="info_jt" role="tabpanel" aria-labelledby="info_jt-tab">
@@ -48,27 +44,23 @@ const SectionArea = () => {
                                     </div>
 
                                     <div className="tab-pane fade" id="entraineur_jt" role="tabpanel" aria-labelledby="entraineur_jt-tab">
-
-                                    </div>
-
-                                    <div className="tab-pane fade" id="cal_jt" role="tabpanel" aria-labelledby="cal_jt-tab">
-
+                                        <JTEntraineur />
                                     </div>
 
                                     <div className="tab-pane fade" id="info_rff" role="tabpanel" aria-labelledby="info_rff-tab">
                                         <RFFInfo />
                                     </div>
 
-                                    <div className="tab-pane fade" id="entraineur_rff" role="tabpanel" aria-labelledby="entraineur_rff-tab">
-
-                                    </div>
-
                                     <div className="tab-pane fade" id="schema_5km_rff" role="tabpanel" aria-labelledby="schema_5km_rff-tab">
-
+                                        <RFFK
+                                            distance="5k"
+                                        />
                                     </div>
 
                                     <div className="tab-pane fade" id="schema_10km_rff" role="tabpanel" aria-labelledby="schema_10km_rff-tab">
-
+                                        <RFFK
+                                            distance="10k"
+                                        />
                                     </div>
                                 </div>
                             </div>

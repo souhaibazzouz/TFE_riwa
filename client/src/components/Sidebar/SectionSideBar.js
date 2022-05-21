@@ -34,11 +34,6 @@ const SectionSideBar = () => {
                                                             Entraineur
                                                         </a>
                                                     </li>
-                                                    <li >
-                                                        <a className="nav-link" data-bs-toggle="pill" href="#cal_bpm" role="tab" aria-controls="cal_bpm" aria-selected="true">
-                                                            Calendrier
-                                                        </a>
-                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -63,11 +58,6 @@ const SectionSideBar = () => {
                                                     <li >
                                                         <a className="nav-link" data-bs-toggle="pill" href="#entraineur_tc" role="tab" aria-controls="entraineur_tc" aria-selected="true">
                                                             Entraineur
-                                                        </a>
-                                                    </li>
-                                                    <li >
-                                                        <a className="nav-link" data-bs-toggle="pill" href="#cal_tc" role="tab" aria-controls="cal_tc" aria-selected="true">
-                                                            Calendrier
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -95,11 +85,6 @@ const SectionSideBar = () => {
                                                             Entraineur
                                                         </a>
                                                     </li>
-                                                    <li >
-                                                        <a className="nav-link" data-bs-toggle="pill" href="#cal_jt" role="tab" aria-controls="cal_jt" aria-selected="true">
-                                                            Calendrier
-                                                        </a>
-                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -118,11 +103,6 @@ const SectionSideBar = () => {
                                                     <li >
                                                         <a className="nav-link" data-bs-toggle="pill" href="#info_rff" role="tab" aria-controls="info_rff" aria-selected="true">
                                                             Informations
-                                                        </a>
-                                                    </li>
-                                                    <li >
-                                                        <a className="nav-link" data-bs-toggle="pill" href="#inscription_rff" role="tab" aria-controls="inscription_rff" aria-selected="true">
-                                                            Inscription au RFF
                                                         </a>
                                                     </li>
                                                     <li >
