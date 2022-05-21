@@ -23,7 +23,7 @@ const SectionSideBar = () => {
 
                                         <div id="collapse_1" className="collapse" aria-labelledby="acc_1" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
-                                                <ul>
+                                                <ul className="nav" role="tablist" >
                                                     <li >
                                                         <a className="nav-link active" data-bs-toggle="pill" href="#info_bpm" role="tab" aria-controls="info_bpm" aria-selected="true">
                                                             Informations
@@ -54,7 +54,7 @@ const SectionSideBar = () => {
 
                                         <div id="collapse_2" className="collapse" aria-labelledby="acc_2" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
-                                                <ul>
+                                                <ul className="nav" role="tablist" >
                                                     <li >
                                                         <a className="nav-link" data-bs-toggle="pill" href="#info_tc" role="tab" aria-controls="info_tc" aria-selected="true">
                                                             Informations
@@ -84,7 +84,7 @@ const SectionSideBar = () => {
                                         </div>
                                         <div id="collapse_3" className="collapse" aria-labelledby="acc_3" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
-                                                <ul>
+                                                <ul className="nav" role="tablist" >
                                                     <li >
                                                         <a className="nav-link" data-bs-toggle="pill" href="#info_jt" role="tab" aria-controls="info_jt" aria-selected="true">
                                                             Informations
@@ -114,7 +114,7 @@ const SectionSideBar = () => {
                                         </div>
                                         <div id="collapse_4" className="collapse" aria-labelledby="acc_4" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
-                                                <ul>
+                                                <ul className="nav" role="tablist" >
                                                     <li >
                                                         <a className="nav-link" data-bs-toggle="pill" href="#info_rff" role="tab" aria-controls="info_rff" aria-selected="true">
                                                             Informations

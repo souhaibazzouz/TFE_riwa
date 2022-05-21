@@ -14,7 +14,12 @@ const Contact = () => {
          <Header />
          <CommonPageHeader title="Informations" subtitle="Infos" />
          <InfoArea />
-         <InfoCatCoti />
+         <InfoCatCoti
+            bpm="true"
+            tc="true"
+            jt="true"
+            rff="true"
+         />
          <InfoStatuts />
          <Footer />
       </>
