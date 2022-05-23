@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsCurrencyEuro, BsTypeH1 } from 'react-icons/bs';
+import { BsCurrencyEuro } from 'react-icons/bs';
 import { BiRun } from 'react-icons/bi';
 import { AiOutlineStop } from 'react-icons/ai';
 import { FaCheck, FaArrowRight } from 'react-icons/fa';

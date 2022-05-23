@@ -45,11 +45,8 @@ const StageArea = () => {
                                     <p><span>Réservé aux membres du RIWA !</span></p>
                                     <p>
                                         <div className="services__action grey-bg-18 mb-15">
-                                            <a>
-                                                <i > <AiOutlineFilePdf /> </i>
-                                                Informations et formulaire d’inscription au stage.</a>
+                                            <span>Les inscriptions sont clôturées !!!</span>
                                         </div>
-                                        <span>Les inscriptions sont clôturées !!!</span>
                                     </p>
                                 </div>
                             </div>
