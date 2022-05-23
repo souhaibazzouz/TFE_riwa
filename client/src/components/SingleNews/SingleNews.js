@@ -1,12 +1,12 @@
 import { CgArrowLongRight } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 
-const SingleNews = ({ date, name, desc }) => {
+const SingleNews = ({ date, name, desc, image }) => {
    return (
       <>
          <div className="col-xl-4 col-lg-4 col-md-6">
             <div className="blog__item p-relative fix mb-30 white-bg">
-               <div className="blog__thumb" style={{ background: `url(assets/img/blog/blog-1.jpg)`, backgroundPosition: 'center', backgroundSize: 'cover' }} ></div>
+               <div className="blog__thumb" style={{ background: `url(assets/img/blog/item/${image}.jpg)`, backgroundPosition: 'center', backgroundSize: 'cover' }} ></div>
                <div className="blog__content">
                   <div className="blog__meta date mb-45">
                      <h4>{date}</h4>

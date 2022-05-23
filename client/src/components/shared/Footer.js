@@ -21,10 +21,8 @@ const Footer = () => {
                                  <div className="footer__links">
                                     <ul>
                                        <li><Link to="/news">News</Link></li>
-                                       <li><Link to="/competitions">Compétitions</Link></li>
                                        <li><Link to="/resultats">Résultats</Link></li>
                                        <li><Link to="/elites">Elites</Link></li>
-                                       <li><Link to="/galeries">Galeries</Link></li>
                                        <li><Link to="/login">Support</Link></li>
                                     </ul>
                                  </div>

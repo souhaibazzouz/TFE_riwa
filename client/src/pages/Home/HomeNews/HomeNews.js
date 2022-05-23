@@ -16,9 +16,9 @@ const HomeNews = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <SingleNews date="28" name="Kiki" desc="Belle rentrée estival pour les BPM" />
-                        <SingleNews date="23" name="Nico" desc="284 participants au Championnat Provincial BW !!!" />
-                        <SingleNews date="11" name="Stou" desc="Championnats de Cross LBFA / BEL des jeunes" />
+                        <SingleNews date="28" image="1" name="Kiki" desc="Belle rentrée estival pour les BPM" />
+                        <SingleNews date="23" image="2" name="Nico" desc="284 participants au Championnat Provincial BW !!!" />
+                        <SingleNews date="11" image="3" name="Stou" desc="Championnats de Cross LBFA / BEL des jeunes" />
 
                     </div>
                     <div className="row">

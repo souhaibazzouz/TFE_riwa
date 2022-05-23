@@ -11,7 +11,6 @@ import Entrainement from "./pages/Entrainement/Entrainement";
 import Comite from "./pages/Comite/Comite";
 import Coordinateur from "./pages/Coordinateur/Coordinateur";
 import Officiels from "./pages/Officiels/Officiels";
-import Competitions from "./pages/Competitions/Competitions";
 import Organisations from "./pages/Organisations/Organisations";
 import Resultats from "./pages/Resultats/Resultats";
 import Bilan from "./pages/Bilan/Bilan";
@@ -39,7 +38,6 @@ function App() {
           <Route path="/comite" element={<Comite />} />
           <Route path="/coordinateur" element={<Coordinateur />} />
           <Route path="/officiels" element={<Officiels />} />
-          <Route path="/competitions" element={<Competitions />} />
           <Route path="/organisations" element={<Organisations />} />
           <Route path="/resultats" element={<Resultats />} />
           <Route path="/bilan" element={<Bilan />} />
