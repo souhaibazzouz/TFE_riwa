@@ -33,7 +33,7 @@ const RFFK = ({ distance }) => {
                                 <br />
                                 <li><div className="services__action grey-bg-18 mb-15">
                                     <a
-                                        href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/01/RFF_2022_03_Schema_5Km.pdf'
+                                        href='assets/pdf/Schema_5Km.pdf'
                                         target="_blank"
                                         rel="noreferrer">
                                         <i > <AiOutlineFilePdf /> </i>
@@ -41,7 +41,7 @@ const RFFK = ({ distance }) => {
                                 </div></li>
                                 <li><div className="services__action grey-bg-18 mb-15">
                                     <a
-                                        href='https://www.riwa.be/WPRIWA/wp-content/uploads/2018/01/RFF_2018_03_Tableau_Progression_5Km.pdf'
+                                        href='assets/pdf/Progression_5Km.pdf'
                                         target="_blank"
                                         rel="noreferrer">
                                         <i > <AiOutlineFilePdf /> </i>
@@ -79,7 +79,7 @@ const RFFK = ({ distance }) => {
                                 <br />
                                 <li><div className="services__action grey-bg-18 mb-15">
                                     <a
-                                        href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/01/RFF_2022_03_Schema_10Km.pdf'
+                                        href='assets/pdf/Schema_10Km.pdf'
                                         target="_blank"
                                         rel="noreferrer">
                                         <i > <AiOutlineFilePdf /> </i>
@@ -87,7 +87,7 @@ const RFFK = ({ distance }) => {
                                 </div></li>
                                 <li><div className="services__action grey-bg-18 mb-15">
                                     <a
-                                        href='https://www.riwa.be/WPRIWA/wp-content/uploads/2018/01/RFF_2018_03_Tableau_Progression_10Km.pdf'
+                                        href='assets/pdf/Progression_10Km.pdf'
                                         target="_blank"
                                         rel="noreferrer">
                                         <i > <AiOutlineFilePdf /> </i>

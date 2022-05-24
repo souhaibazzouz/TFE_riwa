@@ -46,7 +46,7 @@ const InfoStatuts = () => {
                                         <div id="collapse_1" className="collapse show" aria-labelledby="acc_1" data-bs-parent="#accordionExample">
                                             <div className="card-body accordion-body">
                                                 <a
-                                                    href='https://www.riwa.be/WPRIWA/wp-content/uploads/2018/01/2018_RIWA_AC_Les_Statuts_Version-du-2018_01_08.pdf'
+                                                    href='assets/pdf/Statuts.pdf'
                                                     target="_blank"
                                                     rel="noreferrer">
                                                     <i > <AiOutlineFilePdf /> </i>

@@ -68,7 +68,7 @@ const HomeInfo = () => {
                                         <ul>
                                             <li>
                                                 <a
-                                                    href='https://www.riwa.be/stages/'
+                                                    href='/stages'
                                                     target="_blank"
                                                     rel="noreferrer">
                                                     STAGES ÉTÉ 2022 | Infos & Inscriptions | 6 – 13 ans
@@ -76,7 +76,7 @@ const HomeInfo = () => {
                                             </li>
                                             <li>
                                                 <a
-                                                    href='https://www.riwa.be/WPRIWA/wp-content/uploads/2021/07/2021-flyer-riwa.pdf'
+                                                    href='assets/pdf/flyer-riwa.pdf'
                                                     target="_blank"
                                                     rel="noreferrer">
                                                     Saison 2021-2022 | Infos & Horaire | École d’Athlétisme / TC (dès 13 ans) / Jogging & Trail / Riwa For Fun
@@ -84,7 +84,7 @@ const HomeInfo = () => {
                                             </li>
                                             <li>
                                                 <a
-                                                    href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/01/2022_Reglement-Challenge-JOG-TRAIL.pdf'
+                                                    href='assets/pdf/Reglement-Challenge-JOG-TRAIL.pdf'
                                                     target="_blank"
                                                     rel="noreferrer">
                                                     Calendrier Challenge Jogging-Trail 2022 (update 2/01/22)

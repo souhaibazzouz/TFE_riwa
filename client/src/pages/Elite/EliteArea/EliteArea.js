@@ -13,7 +13,7 @@ const EliteArea = () => {
 
                         <div className="services__action grey-bg-18 mb-15">
                            <a
-                              href='https://www.riwa.be/WPRIWA/wp-content/uploads/2019/11/Statut-Elites-RIWA-19-20.pdf'
+                              href='assets/pdf/Statut-Elites-RIWA.pdf'
                               target="_blank"
                               rel="noreferrer">
                               <i > <AiOutlineFilePdf /> </i>
@@ -21,7 +21,7 @@ const EliteArea = () => {
                         </div>
                         <div className="services__action grey-bg-18 mb-15">
                            <a
-                              href='https://www.riwa.be/WPRIWA/wp-content/uploads/2021/07/Statut_Elites_Jog-Trail_RIWA_2021.pdf'
+                              href='assets/pdf/Statut_Elites_Jog-Trail.pdf'
                               target="_blank"
                               rel="noreferrer">
                               <i > <AiOutlineFilePdf /> </i>Jogging-Trail: Statut et Minimas</a>

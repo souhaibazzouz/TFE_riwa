@@ -3,7 +3,6 @@ import { FaEnvelope } from 'react-icons/fa';
 import { BiMap } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
-
 const Footer = () => {
    return (
       <>
@@ -88,7 +87,7 @@ const Footer = () => {
                                     <ul>
                                        <li>
                                           <a
-                                             href="https://www.riwa.be/WPRIWA/wp-content/uploads/2019/04/RIWA_Document_RGPD_NEW19.pdf"
+                                             href='assets/pdf/RIWA_RGPD.pdf'
                                              target="_blank"
                                              rel="noreferrer">
                                              Règlement Général Protection des Données RIWA
@@ -96,7 +95,7 @@ const Footer = () => {
                                        </li>
                                        <li>
                                           <a
-                                             href="https://www.riwa.be/WPRIWA/wp-content/uploads/2019/04/LBFA_Document_RGPD.pdf"
+                                             href="assets/pdf/LBFA_RGPD.pdf"
                                              target="_blank"
                                              rel="noreferrer">
                                              Règlement Général Protection des Données LBFA
