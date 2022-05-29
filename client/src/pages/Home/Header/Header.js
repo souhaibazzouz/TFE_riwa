@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLocationArrow, FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLocationArrow, FaEnvelope } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import Sidebar from '../../../components/Sidebar/Sidebar';
 import useGlobalContext from '../../../hooks/useGlobalContext';
@@ -26,17 +26,6 @@ const Header = () => {
                                  >
                                     <i >
                                        <FaFacebookF />
-                                    </i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a
-                                    href="https://twitter.com/home"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                 >
-                                    <i >
-                                       <FaTwitter />
                                     </i>
                                  </a>
                               </li>

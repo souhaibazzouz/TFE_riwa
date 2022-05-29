@@ -19,7 +19,7 @@ const AllCatSideBar = () => {
                                         <div className="card-header accordion-header" id="acc_1" >
                                             <h5 className="mb-0">
                                                 <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
-                                                    Ecole D'athlétisme
+                                                    École d'Athlétisme
                                                 </button>
                                             </h5>
                                         </div>

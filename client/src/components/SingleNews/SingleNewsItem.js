@@ -2,7 +2,7 @@ import React from 'react';
 import { CgArrowLongRight } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 
-const SingleNewsItem = ({ image, nom_auteur, date, titre, debut_article }) => {
+const SingleNewsItem = ({ image, date, titre, debut_article }) => {
     return (
         <>
             <div className="blog__item-2 mb-50 fix" >
@@ -14,8 +14,6 @@ const SingleNewsItem = ({ image, nom_auteur, date, titre, debut_article }) => {
                 <div className="blog__content-2">
                     <div className="blog__meta-2 mb-15 d-sm-flex align-items-center">
                         <div className="blog__user pr-20 mr-20">
-                            <img src={`assets/img/team/comite/christel_baudrie.jpg`} alt="" />
-                            <h6>{nom_auteur}</h6>
                         </div>
                         <div className="blog__date">
                             <span>{date}</span>
