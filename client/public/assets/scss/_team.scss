@@ -19,10 +19,49 @@
         }
     }
 
+    &__action {
+        padding: 15px 30px;
+        position: relative;
+        font-weight: bold;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: auto;
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            height: 0;
+            background: $theme-color;
+        }
+
+        & a {
+            margin-bottom: 0;
+            display: block;
+
+            & i {
+                color: $theme-color;
+                padding-right: 15px;
+            }
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    &__titre {
+        padding: 15px;
+        position: relative;
+    }
+
     &__item {
-        padding: 30px 35px;
+        padding: 40px 45px;
         background: #409C15;
         @include border-radius(20px);
+        min-height: auto;
+        height: 95%;
+        overflow: auto;
 
         &-add {
             background: $white;

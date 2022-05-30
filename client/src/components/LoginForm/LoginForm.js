@@ -1,19 +1,27 @@
 import React from 'react';
 import Axios from 'axios'
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 const LoginForm = () => {
 
+    /*const [usernameReg, setUsernameReg] = useState('');
+    const [passwordReg, setPasswordReg] = useState('');*/
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    const [loginStatut, setloginStatut] = useState(false);
+    const [loginError, setloginError] = useState('');
+
+    Axios.defaults.withCredentials = true;
 
     /*const register = () => {
         Axios.post('http://localhost:3001/register', {
             username: usernameReg,
             password: passwordReg,
         }).then((response) => {
-            console.log(response)
         })
     }*/
 
@@ -23,16 +31,23 @@ const LoginForm = () => {
             password: password,
         }).then((response) => {
 
-            if (response.data.message) {
-                setloginStatut(response.data.message)
+            if (!response.data.auth) {
+                setloginError(response.data.message)
             } else {
-                setloginStatut(response.data[0].username);
-                console.log(response.data)
+                localStorage.setItem("token", response.data.token)
+                document.location.href = "/";
             }
         })
-    }
+    };
 
-    const [loginStatut, setloginStatut] = useState('');
+    useEffect(() => {
+        Axios.get("http://localhost:3001/login").then((response) => {
+            if (response.data.loggedIn === true) {
+                setloginStatut(response.data.user[0].username);
+            }
+        });
+    }, []);
+
 
     return (
         <>
@@ -66,10 +81,10 @@ const LoginForm = () => {
                                                     onClick={login}>Connexion</button>
                                             </form>
                                         </div>
-                                        <h4>{loginStatut}</h4>
                                     </div>
                                 </div>
                             </div>
+                            <h4>{loginError}</h4>
                         </div>
                     </div>
                 </div>

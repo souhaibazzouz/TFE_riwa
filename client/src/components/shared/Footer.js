@@ -2,8 +2,36 @@ import React from 'react';
 import { FaEnvelope } from 'react-icons/fa';
 import { BiMap } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import Axios from 'axios';
+
+
 
 const Footer = () => {
+
+   const [authState, setAuthState] = useState(false);
+
+   useEffect(() => {
+      Axios.get("http://localhost:3001/isUserAuth", {
+         headers: {
+            "x-access-token": localStorage.getItem("token"),
+         },
+      }).then((response) => {
+         if (response.data.auth === true) {
+            setAuthState(true);
+         }
+      })
+   }, []);
+
+
+   const logout = () => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('userDetails');
+      setAuthState(false);
+      document.location.href = "/login";
+   }
+
    return (
       <>
          <footer>
@@ -22,7 +50,12 @@ const Footer = () => {
                                        <li><Link to="/news">News</Link></li>
                                        <li><Link to="/resultats">Résultats</Link></li>
                                        <li><Link to="/elites">Elites</Link></li>
-                                       <li><Link to="/login">Support</Link></li>
+                                       {authState === false &&
+                                          <li><Link to="/login">Support</Link></li>
+                                       }
+                                       {authState === true &&
+                                          <li><Link to="/" onClick={logout}>Déconnexion</Link></li>
+                                       }
                                     </ul>
                                  </div>
                               </div>

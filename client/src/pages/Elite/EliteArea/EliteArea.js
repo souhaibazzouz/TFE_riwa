@@ -2,34 +2,40 @@ import React from 'react';
 import SingleElite from '../../../components/SingleElite/SingleElite';
 import { AiOutlineFilePdf } from 'react-icons/ai';
 
+
 const EliteArea = () => {
    return (
       <>
-         <section className="team__area pt-115 pb-110">
+         <section className="team__area">
             <div className="container">
                <div className="row">
-                  <div className="col-xl-4 col-lg-4 order-last order-lg-first">
-                     <div className="services__sidebar mr-50">
-
-                        <div className="services__action grey-bg-18 mb-15">
-                           <a
-                              href='assets/pdf/Statut-Elites-RIWA.pdf'
-                              target="_blank"
-                              rel="noreferrer">
-                              <i > <AiOutlineFilePdf /> </i>
-                              Athlétisme: Statut et Minimas</a>
-                        </div>
-                        <div className="services__action grey-bg-18 mb-15">
-                           <a
-                              href='assets/pdf/Statut_Elites_Jog-Trail.pdf'
-                              target="_blank"
-                              rel="noreferrer">
-                              <i > <AiOutlineFilePdf /> </i>Jogging-Trail: Statut et Minimas</a>
-                        </div>
+                  <div className="col-xl-3 col-lg-4 col-md-6">
+                     <div className="team__titre">
+                        <h4>Statut et Minimas: </h4>
+                     </div>
+                  </div>
+                  <div className="col-xl-3 col-lg-4 col-md-6">
+                     <div className="team__action">
+                        <a
+                           href='assets/pdf/Statut-Elites-RIWA.pdf'
+                           target="_blank"
+                           rel="noreferrer">
+                           <i > <AiOutlineFilePdf /> </i>
+                           Athlétisme</a>
+                     </div>
+                  </div>
+                  <div className="col-xl-3 col-lg-4 col-md-6">
+                     <div className="team__action grey-bg-18 mb-15">
+                        <a
+                           href='assets/pdf/Statut_Elites_Jog-Trail.pdf'
+                           target="_blank"
+                           rel="noreferrer">
+                           <i > <AiOutlineFilePdf /> </i>
+                           Jogging-Trail</a>
                      </div>
                   </div>
                </div>
-               <div className="row">
+               <div className='row'>
                   <SingleElite
                      image="1"
                      name="Emma Broze"
@@ -98,8 +104,7 @@ const EliteArea = () => {
                      name="Niels Mallinger"
                      title="Élite A en Hauteur"
                      palmares="yolo" />
-
-               </div >
+               </div>
             </div >
          </section >
       </>

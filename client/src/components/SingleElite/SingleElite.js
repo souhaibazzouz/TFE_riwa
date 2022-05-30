@@ -13,22 +13,6 @@ const SingleElite = ({ image, name, title, palmares }) => {
                      <h3>{name}</h3>
                      <span>{palmares}</span>
                   </div>
-                  <div className="team__social theme-social">
-                     <ul>
-                        <li>
-                           <a href="https://www.facebook.com/">
-                              <i > <FaFacebookF /> </i>
-                              <i > <FaFacebookF /> </i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/1248_performers/">
-                              <i > <FaInstagram /> </i>
-                              <i > <FaInstagram /> </i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
                </div>
                <div className="team__content">
                   <h3><Link to="/teamDetails">{name}</Link></h3>
