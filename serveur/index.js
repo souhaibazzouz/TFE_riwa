@@ -1,6 +1,9 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require("cors");
+const fileUpload = require("express-fileupload")
+const multer = require("multer")
+
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -12,8 +15,20 @@ const saltRounds = 10;
 const SECRET = 'Souhaib-Riwa-SecretKey'
 
 const jwt = require('jsonwebtoken');
+const path = require('path');
 
 const app = express();
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './upload')
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+})
+
+const upload = multer({ storage: storage })
 
 app.use(express.json());
 app.use(
@@ -24,6 +39,7 @@ app.use(
     })
 );
 app.use(cookieParser());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
@@ -37,6 +53,8 @@ app.use(
         },
     })
 )
+
+app.use(fileUpload({ createParentPath: true }))
 
 const db = mysql.createConnection({
     user: "root",
@@ -61,6 +79,10 @@ const verifyJWT = (req, res, next) => {
     }
 }
 
+
+
+// ROUTES
+
 app.post('/register', (req, res) => {
     const username = req.body.username
     const password = req.body.password
@@ -80,6 +102,42 @@ app.post('/register', (req, res) => {
     });
 });
 
+app.post('/upload/file', (req, res) => {
+    const date = req.body.date
+    const name = req.body.name
+    const filePDF = req.body.filePDF
+    const compClub = req.body.compClub
+    const cat = req.body.cat
+
+    db.query(
+        'INSERT INTO resultat (date, nom, filePDF, compClub) VALUE (?,?,?,?)',
+        [date, name, filePDF, compClub],
+        (err, result) => {
+            console.log(err);
+        }
+    );
+
+    db.query(
+        'INSERT INTO resultat_categorie (idResultat, idCategorie) VALUE (LAST_INSERT_ID(),?)',
+        [cat],
+        (err, result) => {
+            console.log(err);
+        }
+    );
+
+})
+
+app.get('/import/file/:id', (req, res) => {
+    const id = req.params.id
+    db.query(
+        `SELECT * FROM resultat INNER JOIN resultat_categorie ON resultat.idResultat = resultat_categorie.idResultat and resultat_categorie.idCategorie = ${id};`,
+        (err, result) => {
+            console.log(err)
+            res.send(result)
+        }
+    );
+})
+
 
 app.get('/isUserAuth', verifyJWT, (req, res) => {
     res.send({ auth: true })
@@ -92,6 +150,8 @@ app.get("/login", (req, res) => {
         res.send({ loggedIn: false });
     }
 });
+
+
 
 app.post('/login', (req, res) => {
     const username = req.body.username

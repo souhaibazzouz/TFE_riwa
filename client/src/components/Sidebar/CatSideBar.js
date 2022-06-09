@@ -12,29 +12,17 @@ const CatSideBar = () => {
                     <div className="services__widget-content">
                         <div className="services__link">
                             <div className="statut__accordion p-relative">
-                                <div className="card accordion-item">
-                                    <h5 className="mb-0">
-                                        <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+                                <div className="nav" role="tablist" >
+                                    <div className="card accordion-item">
+                                        <a className="nav-link btn btn-link collapsed" data-bs-toggle="pill" href="#resultat_bpm" role="tab" aria-controls="resultat_bpm" aria-selected="true">
                                             Ecole D'athlétisme
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div className="card">
-                                    <div className="card-header" id="acc_2" >
-                                        <h5 className="mb-0">
-                                            <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2">
-                                                Toutes Catégories
-                                            </button>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div className="card">
-                                    <div className="card-header" id="acc_3" >
-                                        <h5 className="mb-0">
-                                            <button className="btn btn-link collapsed">
-                                                Jogging & Trail
-                                            </button>
-                                        </h5>
+                                        </a>
+                                        <a className="nav-link btn btn-link collapsed" data-bs-toggle="pill" href="#resultat_tc" role="tab" aria-controls="resultat_tc" aria-selected="true">
+                                            Toutes Catégories
+                                        </a>
+                                        <a className="nav-link btn btn-link collapsed" data-bs-toggle="pill" href="#resultat_jt" role="tab" aria-controls="resultat_jt" aria-selected="true">
+                                            Jogging & Trail
+                                        </a>
                                     </div>
                                 </div>
                             </div>

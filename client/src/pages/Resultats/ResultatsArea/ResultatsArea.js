@@ -1,8 +1,61 @@
 import React from 'react';
 import CatSideBar from '../../../components/Sidebar/CatSideBar';
-import { AiOutlineFilePdf } from 'react-icons/ai';
+import { AiFillEdit } from 'react-icons/ai';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import Axios from 'axios';
+import Modal from 'react-bootstrap/Modal'
+import TC from './ResultatsAreaTab/TC';
+import BPM from './ResultatsAreaTab/BPM';
+import JT from './ResultatsAreaTab/JT';
+
 
 const ResultatsArea = () => {
+    const [date, setDate] = useState('');
+    const [name, setName] = useState('');
+    const [filePDF, setFilePDF] = useState('');
+    const [compClub, setCompClub] = useState(false);
+    const [cat, setCat] = useState('');
+
+
+    const [authState, setAuthState] = useState(false);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+    const upload = () => {
+        try {
+            Axios.post('http://localhost:3001/upload/file', {
+                date: date,
+                name: name,
+                filePDF: filePDF,
+                compClub: compClub,
+                cat: cat,
+            }).then((response) => {
+            })
+            setShow(false)
+            alert("Bien joué\nVous avez correctement ajouté le résultat");
+        } catch (error) {
+            alert("Zuuut!!!\nUne erreur est arrivé lors de l'ajout du résultat");
+            console.log(error)
+        }
+
+
+    }
+
+    useEffect(() => {
+        Axios.get("http://localhost:3001/isUserAuth", {
+            headers: {
+                "x-access-token": localStorage.getItem("token"),
+            },
+        }).then((response) => {
+            if (response.data.auth === true) {
+                setAuthState(true);
+            }
+        })
+    }, []);
+
     return (
         <>
             <section className="table__area pt-115 pb-100">
@@ -12,67 +65,106 @@ const ResultatsArea = () => {
                             <CatSideBar />
                         </div>
                         <div className="col-xl-8 col-lg-8">
-                            <h2>Résultats</h2>
-                            <div className="resultat__content">
-                                <hr />
-                                <ul>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-05-15_RESULTATS_Memorial_Pierre_Ninforge_OCAN.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i>2022/05/15 –  Mémorial Pierre Ninforge – OCAN (Andenne)</span>
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-05-14_RESULTATS_Chmpt_LBFA_TC.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i>2022/05/14 –  Championnats LBFA TC – WS (Woluwé St-Lambert)</span>
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-05-08_RESULTATS_IC_Hommes_Elite_SER.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i>2022/05/08 –  Intercercles Hommes D Élites (résultats) – SER (Seraing)</span>
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-05-08_CLASSEMENT_IC_Hommes_Elite_SER.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i>2022/05/08 –  Intercercles Hommes D Élites (classement) – SER (Seraing)</span>
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-05-07_RESULTATS_IC_Dames_D1_RIWA.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i><b>2022/05/07 –  Intercercles Dames D1 (résultats + classement) – RIWA (Rixensart)</b></span>
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-04-30_RESULTATS_Champ_BEL_10.000m_MALM.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i>2022/04/30 –  Championnats de Belgique de 10.000m – MALM (Malmédy)</span>
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a
-                                            href='https://www.riwa.be/WPRIWA/wp-content/uploads/2022/05/2022-04-30_RESULTATS_Grand_Prix_Mingels_RESC.pdf'
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <span><i > <AiOutlineFilePdf /> </i>2022/04/30 –  Grand Prix Mingels – RESC (Heysel)</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            {authState === true &&
+                                <div>
+                                    <button onClick={handleShow} type="button" className="btn btn-primary"><i ><AiFillEdit /></i> Ajouter</button>
+                                </div>
+                            }
+                            <Modal
+                                size="lg"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered
+                                show={show}
+                                onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Ajouter un résultat</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    Veuillez remplir toutes les informations liées à la compétition que vous voulez ajouter
+                                    <br />
+                                    <br />
+                                    <form>
+                                        <div className='row'>
+                                            <div className='col-xl-3 col-lg-4 col-md-6'>
+                                                <label>Date :</label>
+                                                <input
+                                                    type="date"
+                                                    name="date"
+                                                    onChange={(e) => {
+                                                        setDate(e.target.value);
+                                                    }} />
+                                            </div>
+                                            <div className='col-xl-3 col-lg-4 col-md-6'>
+                                                <label>Nom :</label>
+                                                <input
+                                                    type="text"
+                                                    name='name'
+                                                    onChange={(e) => {
+                                                        setName(e.target.value);
+                                                    }} />
+                                            </div>
+                                            <div className='col-xl-3 col-lg-4 col-md-6'>
+                                                <label>Lien du fichier :</label>
+                                                <input
+                                                    type="text"
+                                                    name='filePDF'
+                                                    accept="application/pdf"
+                                                    onChange={(e) => {
+                                                        setFilePDF(e.target.value)
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div className='row'>
+                                            <div className='col-xl-5 col-lg-6 col-md-12'>
+                                                <label>Compétition du club :</label>
+                                                <input
+                                                    type="checkbox"
+                                                    name='compClub'
+                                                    onChange={(e) => {
+                                                        setCompClub(e.target.checked)
+                                                    }}
+                                                />
+                                            </div>
+                                            <div className='col-xl-5 col-lg-6 col-md-12'>
+                                                <div className="input-group mb-3">
+                                                    <div className="input-group-prepend">
+                                                        <label className="input-group-text">Catégorie</label>
+                                                    </div>
+                                                    <select
+                                                        className="custom-select"
+                                                        onChange={(e) => {
+                                                            setCat(e.target.value)
+                                                        }}>
+                                                        <option value="1">Ecole d'Athlétisme</option>
+                                                        <option value="4">Toutes Catégories</option>
+                                                        <option value="5">Jogging et Trail</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <button onClick={handleClose} type="button" className="btn btn-secondary">
+                                        Close
+                                    </button>
+                                    <button onClick={upload} type="button" className="btn btn-primary">
+                                        <i ><AiFillEdit /></i> Ajouter
+                                    </button>
+                                </Modal.Footer>
+                            </Modal>
+                            <div className="tab-content">
+                                <div className="tab-pane fade show active" id="resultat_bpm" role="tabpanel" aria-labelledby="resultat_bpm-tab">
+                                    <BPM />
+                                </div>
+                                <div className="tab-pane fade" id="resultat_tc" role="tabpanel" aria-labelledby="resultat_tc-tab">
+                                    <TC />
+                                </div>
+                                <div className="tab-pane fade" id="resultat_jt" role="tabpanel" aria-labelledby="resultat_jt-tab">
+                                    <JT />
+                                </div>
                             </div>
                         </div>
                     </div>

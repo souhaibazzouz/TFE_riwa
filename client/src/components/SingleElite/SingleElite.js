@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const SingleElite = ({ image, name, title, palmares }) => {
@@ -8,7 +7,7 @@ const SingleElite = ({ image, name, title, palmares }) => {
          <div className="col-xl-3 col-lg-4 col-md-6">
             <div className="team__item p-relative text-center fix mb-30">
                <div className="team__thumb mb-25">
-                  <img src={`assets/img/team/elite/elite-${image}.jpg`} alt={`Elite ${name}`} />
+                  <img src={`assets/img/team/elite/${image}.jpg`} alt={`Elite ${name}`} />
                   <div className="team__info text-start">
                      <h3>{name}</h3>
                      <span>{palmares}</span>
