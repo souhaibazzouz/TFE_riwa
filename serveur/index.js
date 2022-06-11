@@ -109,22 +109,40 @@ app.post('/upload/file', (req, res) => {
     const compClub = req.body.compClub
     const cat = req.body.cat
 
-    db.query(
-        'INSERT INTO resultat (date, nom, filePDF, compClub) VALUE (?,?,?,?)',
-        [date, name, filePDF, compClub],
-        (err, result) => {
-            console.log(err);
-        }
-    );
+    if (date !== '') {
+        if (name !== '') {
+            if (filePDF !== '' && filePDF) {
+                if (cat !== '') {
+                    db.query(
+                        'INSERT INTO resultat (date, nom, filePDF, compClub) VALUE (?,?,?,?)',
+                        [date, name, filePDF, compClub],
+                        (err, result) => {
+                            console.log(err);
+                        }
+                    );
 
-    db.query(
-        'INSERT INTO resultat_categorie (idResultat, idCategorie) VALUE (LAST_INSERT_ID(),?)',
-        [cat],
-        (err, result) => {
-            console.log(err);
-        }
-    );
+                    db.query(
+                        'INSERT INTO resultat_categorie (idResultat, idCategorie) VALUE (LAST_INSERT_ID(),?)',
+                        [cat],
+                        (err, result) => {
+                            console.log(err);
+                        }
+                    );
 
+                    res.json({ auth: true });
+
+                } else {
+                    res.json({ auth: false, message: "Veuillez choisir une catégorie" });
+                }
+            } else {
+                res.json({ auth: false, message: "Veuillez entrer un URL valide" });
+            }
+        } else {
+            res.json({ auth: false, message: "Veuillez entrer un nom" });
+        }
+    } else {
+        res.json({ auth: false, message: "Veuillez entrer une date!!" });
+    }
 })
 
 app.get('/import/file/:id', (req, res) => {
