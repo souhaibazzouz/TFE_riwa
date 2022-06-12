@@ -111,7 +111,7 @@ app.post('/upload/file', (req, res) => {
 
     if (date !== '') {
         if (name !== '') {
-            if (filePDF !== '' && filePDF) {
+            if (filePDF !== '') {
                 if (cat !== '') {
                     db.query(
                         'INSERT INTO resultat (date, nom, filePDF, compClub) VALUE (?,?,?,?)',
@@ -120,6 +120,7 @@ app.post('/upload/file', (req, res) => {
                             console.log(err);
                         }
                     );
+
 
                     db.query(
                         'INSERT INTO resultat_categorie (idResultat, idCategorie) VALUE (LAST_INSERT_ID(),?)',

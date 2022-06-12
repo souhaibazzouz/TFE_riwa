@@ -51,7 +51,7 @@ const ResultatsArea = () => {
                     setIsValid(true)
                     setTimeout(function () {
                         window.location.reload(1);
-                    }, 5000);
+                    }, 3000);
                 }
             })
         } catch (error) {
