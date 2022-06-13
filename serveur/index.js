@@ -57,10 +57,11 @@ app.use(
 app.use(fileUpload({ createParentPath: true }))
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "",
-    database: "tfe_riwa"
+    user: "souhaib",
+    host: "as485579-001.eu.clouddb.ovh.net",
+    password: "Gu4n0ch4ng432097",
+    port: 35588,
+    database: "riwa"
 });
 const verifyJWT = (req, res, next) => {
     const token = req.headers["x-access-token"]
