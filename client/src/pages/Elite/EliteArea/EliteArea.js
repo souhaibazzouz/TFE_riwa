@@ -182,11 +182,6 @@ const EliteArea = () => {
                </Modal>
                <div className='row'>
                   <SingleElite
-                     image="silhouette"
-                     name="Monsieur Test"
-                     title="Élite A en test"
-                     palmares="yolo" />
-                  <SingleElite
                      image="emma_broze"
                      name="Emma Broze"
                      title="Elite A sur 100m, 200m et 300m Elite B sur 400m"
