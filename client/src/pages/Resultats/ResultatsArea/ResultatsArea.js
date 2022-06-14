@@ -35,7 +35,7 @@ const ResultatsArea = () => {
 
     const upload = () => {
         try {
-            Axios.post('http://localhost:3001/upload/file', {
+            Axios.post('https://riwa-ac.herokuapp.com/upload/file', {
                 date: date,
                 name: name,
                 filePDF: filePDF,
@@ -63,7 +63,7 @@ const ResultatsArea = () => {
     }
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/isUserAuth", {
+        Axios.get("https://riwa-ac.herokuapp.com/isUserAuth", {
             headers: {
                 "x-access-token": localStorage.getItem("token"),
             },

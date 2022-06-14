@@ -10,7 +10,7 @@ const BPM = () => {
     const [resultatList, setResultatList] = useState([])
     useEffect(() => {
         async function getResults() {
-            const response = await axios('http://localhost:3001/import/file/1');
+            const response = await axios('https://riwa-ac.herokuapp.com/import/file/1');
             setResultatList(response.data)
         }
         getResults()
