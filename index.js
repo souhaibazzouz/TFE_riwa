@@ -32,12 +32,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 app.use(express.json());
-app.use(cors({
-    origin: ["https://riwa-ac.herokuapp.com/"],
-    methods: ["GET", "POST"],
-    credentials: true,
-})
-);
+app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
