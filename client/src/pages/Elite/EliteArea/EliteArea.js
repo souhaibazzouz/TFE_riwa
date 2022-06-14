@@ -55,7 +55,7 @@ const EliteArea = () => {
    ]
 
    useEffect(() => {
-      Axios.get("https://riwa-ac.herokuapp.com/isUserAuth", {
+      Axios.get("https://www.riwa-ac.be/isUserAuth", {
          headers: {
             "x-access-token": localStorage.getItem("token"),
          },

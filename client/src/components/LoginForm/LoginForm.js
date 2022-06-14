@@ -18,7 +18,7 @@ const LoginForm = () => {
     Axios.defaults.withCredentials = true;
 
     /*const register = () => {
-        Axios.post('https://riwa-ac.herokuapp.com/register', {
+        Axios.post('https://www.riwa-ac.be/register', {
             username: usernameReg,
             password: passwordReg,
         }).then((response) => {
@@ -26,7 +26,7 @@ const LoginForm = () => {
     }*/
 
     const login = () => {
-        Axios.post('https://riwa-ac.herokuapp.com/login', {
+        Axios.post('https://www.riwa-ac.be/login', {
             username: username,
             password: password,
         }).then((response) => {
@@ -41,7 +41,7 @@ const LoginForm = () => {
     };
 
     useEffect(() => {
-        Axios.get("https://riwa-ac.herokuapp.com/login").then((response) => {
+        Axios.get("https://www.riwa-ac.be/login").then((response) => {
             if (response.data.loggedIn === true) {
                 setloginStatut(response.data.user[0].username);
             }
