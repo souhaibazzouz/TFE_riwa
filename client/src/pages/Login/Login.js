@@ -6,13 +6,13 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Axios from 'axios';
-
+import { API_URL } from '../../url';
 
 const Login = () => {
     const [authState, setAuthState] = useState(false);
 
     useEffect(() => {
-        Axios.get("https://www.riwa-ac.be:3001/isUserAuth", {
+        Axios.get(`${API_URL}/api/isUserAuth`, {
             headers: {
                 "x-access-token": localStorage.getItem("token"),
             },

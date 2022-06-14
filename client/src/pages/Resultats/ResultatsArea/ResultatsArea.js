@@ -9,7 +9,7 @@ import TC from './ResultatsAreaTab/TC';
 import BPM from './ResultatsAreaTab/BPM';
 import JT from './ResultatsAreaTab/JT';
 import Select from 'react-select';
-
+import { API_URL } from '../../../url';
 
 const ResultatsArea = () => {
     const [date, setDate] = useState('');
@@ -35,7 +35,7 @@ const ResultatsArea = () => {
 
     const upload = () => {
         try {
-            Axios.post('https://www.riwa-ac.be:3001/upload/file', {
+            Axios.post(`${API_URL}/api/upload/file`, {
                 date: date,
                 name: name,
                 filePDF: filePDF,
@@ -63,7 +63,7 @@ const ResultatsArea = () => {
     }
 
     useEffect(() => {
-        Axios.get("https://www.riwa-ac.be:3001/isUserAuth", {
+        Axios.get(`${API_URL}/api/isUserAuth`, {
             headers: {
                 "x-access-token": localStorage.getItem("token"),
             },

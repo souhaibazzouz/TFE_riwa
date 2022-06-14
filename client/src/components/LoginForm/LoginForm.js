@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios'
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import { API_URL } from '../../url';
 
 const LoginForm = () => {
 
@@ -18,7 +18,7 @@ const LoginForm = () => {
     Axios.defaults.withCredentials = true;
 
     /*const register = () => {
-        Axios.post('https://www.riwa-ac.be:3001/register', {
+        Axios.post(`${API_URL}/api/register`, {
             username: usernameReg,
             password: passwordReg,
         }).then((response) => {
@@ -26,7 +26,7 @@ const LoginForm = () => {
     }*/
 
     const login = () => {
-        Axios.post('https://www.riwa-ac.be:3001/login', {
+        Axios.post(`${API_URL}/api/login`, {
             username: username,
             password: password,
         }).then((response) => {
@@ -41,7 +41,7 @@ const LoginForm = () => {
     };
 
     useEffect(() => {
-        Axios.get("https://www.riwa-ac.be:3001/login").then((response) => {
+        Axios.get(`${API_URL}/api/login`).then((response) => {
             if (response.data.loggedIn === true) {
                 setloginStatut(response.data.user[0].username);
             }
