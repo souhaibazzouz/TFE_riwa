@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-const whitelist = ["https://riwa-ac.be"]
+const whitelist = ["https://riwa-ac.herokuapp.com"]
 const corsOptions = {
     origin: function (origin, callback) {
         if (!origin || whitelist.indexOf(origin) !== -1) {

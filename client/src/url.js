@@ -1,1 +1,1 @@
-export const API_URL = 'htts://riwa-ac.be'
+export const API_URL = 'https://riwa-ac.herokuapp.com'
