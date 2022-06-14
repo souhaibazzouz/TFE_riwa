@@ -219,6 +219,11 @@ app.post('/api/login', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
+app.get('/', (req, res) => {
+    console.log("Hello world")
+    res.send('<h1>Backend du projet TFE_riwa</h1>')
+})
+
 app.listen(PORT, () => {
     console.log(`running on port ${PORT}`);
 });
