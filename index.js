@@ -1,8 +1,8 @@
 const express = require('express');
-const mysql = require('mysql');
 const cors = require("cors");
 const fileUpload = require("express-fileupload")
 const multer = require("multer")
+const db = require('./config/db')
 
 
 const bodyParser = require("body-parser");
@@ -18,7 +18,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 
 const app = express();
-const PORT = 5000;
+const PORT = 3001;
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -32,12 +32,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 app.use(express.json());
-app.use(
-    cors({
-        origin: ["http://localhost:3000"],
-        methods: ["GET", "POST"],
-        credentials: true,
-    })
+app.use(cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST"],
+    credentials: true,
+})
 );
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -57,13 +56,7 @@ app.use(
 
 app.use(fileUpload({ createParentPath: true }))
 
-const db = mysql.createConnection({
-    user: "souhaib",
-    host: "as485579-001.eu.clouddb.ovh.net",
-    password: "Gu4n0ch4ng432097",
-    port: 35588,
-    database: "riwa"
-});
+
 const verifyJWT = (req, res, next) => {
     const token = req.headers["x-access-token"]
 
