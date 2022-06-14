@@ -10,7 +10,7 @@ const TC = () => {
     const [resultatList, setResultatList] = useState([])
     useEffect(() => {
         async function getResults() {
-            const response = await axios('https://www.riwa-ac.be/import/file/4');
+            const response = await axios('https://www.riwa-ac.be:3001/import/file/4');
             setResultatList(response.data)
         }
         getResults()
