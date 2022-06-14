@@ -31,8 +31,20 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
+const whitelist = ["https://riwa-ac.be"]
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (!origin || whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error("Not allowed by CORS"))
+        }
+    },
+    credentials: true,
+}
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -73,7 +85,7 @@ const verifyJWT = (req, res, next) => {
 
 // ROUTES
 
-app.post('/register', (req, res) => {
+app.post('/api/register', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
@@ -92,7 +104,7 @@ app.post('/register', (req, res) => {
     });
 });
 
-app.post('/upload/file', (req, res) => {
+app.post('/api/upload/file', (req, res) => {
     const date = req.body.date
     const name = req.body.name
     const filePDF = req.body.filePDF
@@ -136,7 +148,7 @@ app.post('/upload/file', (req, res) => {
     }
 })
 
-app.get('/import/file/:id', (req, res) => {
+app.get('/api/import/file/:id', (req, res) => {
     const id = req.params.id
     db.query(
         `SELECT * FROM resultat INNER JOIN resultat_categorie ON resultat.idResultat = resultat_categorie.idResultat and resultat_categorie.idCategorie = ${id};`,
@@ -148,11 +160,11 @@ app.get('/import/file/:id', (req, res) => {
 })
 
 
-app.get('/isUserAuth', verifyJWT, (req, res) => {
+app.get('/api/isUserAuth', verifyJWT, (req, res) => {
     res.send({ auth: true })
 })
 
-app.get("/login", (req, res) => {
+app.get("/api/login", (req, res) => {
     if (req.session.user) {
         res.send({ loggedIn: true, user: req.session.user });
     } else {
@@ -162,7 +174,7 @@ app.get("/login", (req, res) => {
 
 
 
-app.post('/login', (req, res) => {
+app.post('/api/login', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 

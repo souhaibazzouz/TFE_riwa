@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import Select from 'react-select';
 import Axios from 'axios';
 import Modal from 'react-bootstrap/Modal'
-
+import { API_URL } from '../../../url';
 
 const EliteArea = () => {
    const [name, setName] = useState('');
@@ -55,7 +55,7 @@ const EliteArea = () => {
    ]
 
    useEffect(() => {
-      Axios.get("https://www.riwa-ac.be:3001/isUserAuth", {
+      Axios.get(`${API_URL}/api/isUserAuth`, {
          headers: {
             "x-access-token": localStorage.getItem("token"),
          },

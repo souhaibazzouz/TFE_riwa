@@ -3,13 +3,14 @@ import { AiOutlineFilePdf } from 'react-icons/ai';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import { API_URL } from '../../../../url';
 
 const JT = () => {
 
     const [resultatList, setResultatList] = useState([])
     useEffect(() => {
         async function getResults() {
-            const response = await axios('https://www.riwa-ac.be:3001/import/file/5');
+            const response = await axios(`${API_URL}/api/import/file/5`);
             setResultatList(response.data)
         }
         getResults()
