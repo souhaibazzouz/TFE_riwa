@@ -18,7 +18,6 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 
 const app = express();
-const PORT = 3001;
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -43,7 +42,9 @@ const corsOptions = {
     credentials: true,
 }
 
-app.use(express.json());
+app.use(express.json({
+    extended: false
+}));
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -206,7 +207,8 @@ app.post('/api/login', (req, res) => {
         })
 })
 
+const PORT = process.env.PORT || 5000;
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(PORT, () => {
     console.log(`running on port ${PORT}`);
 });
