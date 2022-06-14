@@ -12,7 +12,7 @@ const session = require("express-session");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-const SECRET = 'Souhaib-Riwa-SecretKey'
+const SECRET = require('./config/secret-key')
 
 const jwt = require('jsonwebtoken');
 const path = require('path');
