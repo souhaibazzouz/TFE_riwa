@@ -35,7 +35,7 @@ const ResultatsArea = () => {
 
     const upload = () => {
         try {
-            Axios.post('https://www.riwa-ac.be/upload/file', {
+            Axios.post('https://www.riwa-ac.be:3001/upload/file', {
                 date: date,
                 name: name,
                 filePDF: filePDF,
@@ -63,7 +63,7 @@ const ResultatsArea = () => {
     }
 
     useEffect(() => {
-        Axios.get("https://www.riwa-ac.be/isUserAuth", {
+        Axios.get("https://www.riwa-ac.be:3001/isUserAuth", {
             headers: {
                 "x-access-token": localStorage.getItem("token"),
             },
