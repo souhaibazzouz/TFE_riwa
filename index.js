@@ -207,6 +207,6 @@ app.post('/login', (req, res) => {
 })
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`running on port ${PORT}`);
 });
