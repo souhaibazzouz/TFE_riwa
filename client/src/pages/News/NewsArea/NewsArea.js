@@ -17,7 +17,7 @@ const NewsArea = () => {
                                 <SingleNewsItem
                                     image="1"
                                     nom_auteur="stou"
-                                    date="28 avril 2022"
+                                    date="29 avril 2022"
                                     titre="Belle rentrée estival pour les BPM"
                                     debut_article="Weekend chargé pour les athlètes du RIWA … Après
                                      le Championnat Provincial du BW pour les grands, 28 jeunes
