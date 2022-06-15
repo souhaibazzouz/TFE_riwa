@@ -32,15 +32,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-const whitelist = ["https://riwa-ac.herokuapp.com"]
+const whitelist = ["http://localhost:3000"]
 const corsOptions = {
-    origin: function (origin, callback) {
-        if (!origin || whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            callback(new Error("Not allowed by CORS"))
-        }
-    },
+    origin: '*',
     credentials: true,
 }
 
@@ -202,11 +196,11 @@ app.post('/api/login', (req, res) => {
 
                         res.json({ auth: true, token: token, result: result });
                     } else {
-                        res.json({ auth: false, message: "Veuillez entrer le bon mot de passe!" });
+                        res.json({ auth: false, message: "Veuillez entrer le bon utilisateur et/ou mot de passe!" });
                     }
                 });
             } else {
-                res.json({ auth: false, message: "Cet utilisateur n'existe pas" });
+                res.json({ auth: false, message: "Veuillez entrer le bon utilisateur et/ou mot de passe!" });
             }
         })
 })
