@@ -44,7 +44,7 @@ const corsOptions = {
     credentials: true,
 }
 
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(path.join('client/build')))
 app.use(express.json({
     extended: false
 }));
