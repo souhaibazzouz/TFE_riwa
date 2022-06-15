@@ -4,6 +4,8 @@ const fileUpload = require("express-fileupload")
 const multer = require("multer")
 const db = require('./config/db')
 
+const PORT = process.env.PORT || 5000;
+
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -42,6 +44,7 @@ const corsOptions = {
     credentials: true,
 }
 
+app.use(express.static(path.join(__dirname, "public")))
 app.use(express.json({
     extended: false
 }));
@@ -49,15 +52,6 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-});
 
 
 app.use(
@@ -217,7 +211,6 @@ app.post('/api/login', (req, res) => {
         })
 })
 
-const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
     console.log("Hello world")
