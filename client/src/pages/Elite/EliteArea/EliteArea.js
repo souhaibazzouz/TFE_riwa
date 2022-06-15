@@ -193,57 +193,106 @@ const EliteArea = () => {
                      image="lionel_cricus"
                      name="Lionel Cricus"
                      title="Élite B sur 200m, 300m & Longueur"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>9e</b> aux <b>Championnats LBFA Cadet</b> en Longueur avec <b>5m21</b> <br />
+                           <b>19e</b> aux <b>Championnats LBFA Cadet</b> sur 100m en <b>12″74</b> <br />
+                           <b>Record personnel</b> en <b>Longueur 5m38</b> <br />
+                           <b>Record personnel</b> sur <b>100m 12″58</b>
+                        </p>
+                     } />
                   <SingleElite
                      image="gemma_delreux"
                      name="Gemma Delreux"
                      title="Élite B en Longueur"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Record personnel</b> en <b>Longueur avec 4m68</b><br />
+                           <b>Record personnel</b> sur <b>100m en 13″96</b><br />
+                           <b>Record personnel</b>sur <b>200m en 30″12</b>
+                        </p>
+                     } />
                   <SingleElite
                      image="guillaume_demeulemeester"
                      name="Guillaume Demeulemeester"
                      title="Élite Jogging-Trail"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>64e</b> au général lors des <b>Championnats de Belgique de 10km</b> sur route en <b>32’37</b>
+                        </p>
+                     } />
                   <SingleElite
                      image="arnaud_descampe"
                      name="Arnaud Descampe"
                      title="Élite Jogging-Trail"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="nicole_desille"
                      name="Nicole Desille"
                      title="Élite Jogging-Trail"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="denis_galerin"
                      name="Denis Galerin"
                      title="Élite Jogging-Trail"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="simon_genow"
                      name="Simon Genow"
                      title="Élite B en Disque"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="lionel_halleux"
                      name="Lionel Halleux"
                      title="Élite A sur 300m & 400m"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="jb_lejeune"
                      name="Jean-Baptiste Lejeune"
                      title="Élite A en Longueur"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="lois_makena"
                      name="Loïs Makena"
                      title="Élite A en Hauteur"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                   <SingleElite
                      image="niels_mallinger"
                      name="Niels Mallinger"
                      title="Élite A en Hauteur"
-                     palmares="yolo" />
+                     palmares={
+                        <p>
+                           <b>Aucun palmarès</b> encodé!
+                        </p>
+                     } />
                </div>
             </div >
          </section >
